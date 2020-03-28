@@ -18,16 +18,16 @@ import {
 const Routes = () => {
     return (
         <Switch>
-            <Redirect
+            {/* <Redirect
                 exact
                 from="/"
-                to="/home"
-            />
+                to="/"
+            /> */}
             <RouteWithLayout
                 component={Home}
                 exact
                 layout={MainLayout}
-                path="/home"
+                path="/"
             />
             <RouteWithLayout
                 component={About}

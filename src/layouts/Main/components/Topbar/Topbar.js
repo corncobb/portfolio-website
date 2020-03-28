@@ -34,11 +34,13 @@ const Topbar = props => {
     >
       <Toolbar>
         <RouterLink to="/">
-          <img
-            alt="Logo"
-            src="images/logos/LendULogoWhite.png"
-            width="200px"
-          />
+          <div>Home</div>
+        </RouterLink>
+        <RouterLink to="/about">
+          <div>About</div>
+        </RouterLink>
+        <RouterLink to="/contact">
+          <div>Contact</div>
         </RouterLink>
         <div className={classes.flexGrow} />
         <Hidden mdDown>

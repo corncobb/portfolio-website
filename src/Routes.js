@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Redirect } from 'react-router-dom';
+import { Switch, Redirect, Route } from 'react-router-dom';
 
 import { RouteWithLayout } from './components';
 import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
@@ -11,42 +11,36 @@ import {
     NotFound
 } from './views'
 
-import {
-    Home as HomeView,
-} from './views';
-
 const Routes = () => {
     return (
         <Switch>
-            {/* <Redirect
-                exact
-                from="/"
-                to="/"
-            /> */}
-            <RouteWithLayout
-                component={Home}
-                exact
-                layout={MainLayout}
-                path="/"
-            />
             <RouteWithLayout
                 component={About}
-                exact
                 layout={MainLayout}
                 path="/about"
             />
             <RouteWithLayout
                 component={Contact}
-                exact
                 layout={MainLayout}
                 path="/contact"
             />
             <RouteWithLayout
                 component={NotFound}
-                exact
                 layout={MinimalLayout}
                 path="/not-found"
             />
+            <RouteWithLayout
+                exact
+                component={Home}
+                layout={MainLayout}
+                path="/"
+
+            />
+            {/* <Route
+                component={Home}
+                exact
+                path="/"
+            /> */}
             <Redirect to="/not-found" />
         </Switch>
     );

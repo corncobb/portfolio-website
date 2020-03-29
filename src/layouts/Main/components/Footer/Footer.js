@@ -24,15 +24,15 @@ const Footer = props => {
         &copy;{' '}
         <Link
           component="a"
-          href="#"
-          target="_blank"
+          href="/"
+          
         >
-          LendU
+        Cameron Cobb
         </Link>
-        . 2019
+        &nbsp;{new Date().getFullYear()}
       </Typography>
       <Typography variant="caption">
-        Created with love by broke college kids wanting to make a difference in the financial world.
+        Built with React, Material-UI, and Google Firebase
       </Typography>
     </div>
   );

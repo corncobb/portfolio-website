@@ -3,18 +3,8 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import MapIcon from '@material-ui/icons/Map';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import TextFieldsIcon from '@material-ui/icons/TextFields';
-import ImageIcon from '@material-ui/icons/Image';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
-import SettingsIcon from '@material-ui/icons/Settings';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
-import DescriptionIcon from '@material-ui/icons/Description';
-import HelpIcon from '@material-ui/icons/Help';
-import BuildIcon from '@material-ui/icons/Build';
 
+import NavigationItems from '../NavigationItems';
 
 import { Profile, SidebarNav, UpgradePlan } from './components';
 
@@ -46,39 +36,6 @@ const Sidebar = props => {
 
   const classes = useStyles();
 
-  const pages = [
-    {
-      title: 'Home',
-      href: '/home',
-      icon: <DashboardIcon />
-    },
-    {
-      title: 'Roadmap',
-      href: '/roadmap',
-      icon: <MapIcon />
-    },
-    {
-      title: 'Resources',
-      href: '/resources',
-      icon: <BuildIcon />
-    },
-    {
-      title: 'Materials',
-      href: '/materials',
-      icon: <DescriptionIcon />
-    },
-    {
-      title: 'Account',
-      href: '/account',
-      icon: <SettingsIcon />
-    },
-    {
-      title: 'Support',
-      href: '/support',
-      icon: <HelpIcon />
-    }
-  ];
-
   return (
     <Drawer
       anchor="left"
@@ -91,11 +48,9 @@ const Sidebar = props => {
         {...rest}
         className={clsx(classes.root, className)}
       >
-        <Profile />
-        <Divider className={classes.divider} />
         <SidebarNav
           className={classes.nav}
-          pages={pages}
+          pages={NavigationItems}
         />
         {/* <UpgradePlan /> */}
       </div>

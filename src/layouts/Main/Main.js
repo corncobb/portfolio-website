@@ -47,7 +47,6 @@ const Main = props => {
     <div
       className={clsx({
         [classes.root]: true,
-        [classes.shiftContent]: isDesktop
       })}
     >
       <Topbar onSidebarOpen={handleSidebarOpen} />

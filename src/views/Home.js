@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar, Header } from '../components';
+import { Header } from '../components';
 import Particles from 'react-particles-js';
 import { makeStyles } from "@material-ui/styles"
 
@@ -17,7 +17,6 @@ const Home = () => {
 
   return (
     <React.Fragment >
-      <NavBar />
       <Header />
       <Particles
         canvasClassName={classes.particlesCanva}

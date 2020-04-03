@@ -6,6 +6,7 @@ import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
 import {
     Home,
+    Resume,
     About,
     Contact,
     NotFound
@@ -14,6 +15,17 @@ import {
 const Routes = () => {
     return (
         <Switch>
+            <RouteWithLayout
+                component={Home}
+                exact
+                layout={MainLayout}
+                path="/"
+            />
+            <RouteWithLayout
+                component={Resume}
+                layout={MainLayout}
+                path="/resume"
+            />
             <RouteWithLayout
                 component={About}
                 layout={MainLayout}
@@ -29,18 +41,6 @@ const Routes = () => {
                 layout={MinimalLayout}
                 path="/not-found"
             />
-            <RouteWithLayout
-                exact
-                component={Home}
-                layout={MainLayout}
-                path="/"
-
-            />
-            {/* <Route
-                component={Home}
-                exact
-                path="/"
-            /> */}
             <Redirect to="/not-found" />
         </Switch>
     );

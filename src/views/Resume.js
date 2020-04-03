@@ -110,7 +110,6 @@ const Resume = () => {
 
     return (
         <React.Fragment>
-            <NavBar />
             <Box component="header" className={classes.mainContainer}>
                 <Typography variant="h4" align="center" className={classes.heading}>
                     Working Exp...

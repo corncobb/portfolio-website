@@ -1,14 +1,20 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(4)
+    padding: theme.spacing(4),
+    background: "#233",
+    height: "95vh",
   },
   content: {
-    paddingTop: 150,
-    textAlign: 'center'
+    color: 'white',
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    textAlign: "center",
   },
   image: {
     marginTop: 50,
@@ -35,17 +41,13 @@ const NotFound = () => {
         >
           <div className={classes.content}>
             <Typography variant="h1">
-              404: The page you are looking for isn’t here
+              <span style={{ color: "tomato" }}>404</span>
             </Typography>
             <Typography variant="subtitle2">
               You either tried some shady route or you came here by mistake.
               Whichever it is, try using the navigation
             </Typography>
-            <img
-              alt="Under development"
-              className={classes.image}
-              src="/images/undraw_page_not_found_su7k.svg"
-            />
+
           </div>
         </Grid>
       </Grid>

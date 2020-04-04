@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from '@material-ui/core';
 import { MaterialCard } from '../components'
 import { v4 as uuid} from 'uuid';
+import img from '../coding-background-2-min.jpg';
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {
@@ -21,7 +22,7 @@ const products =  [
     tags: ['tutorial'],
     description:
       'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    imageUrl: 'https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab48be3042863478ea7d28e/file-xiivbh5WpJ.png',
+    imageUrl: img,
     totalViews: '1023',
     dated: 'September 14, 2019'
   },
@@ -31,7 +32,7 @@ const products =  [
     tags: ['tutorial'],
     description:
       'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    imageUrl: 'https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab48be3042863478ea7d28e/file-xiivbh5WpJ.png',
+    imageUrl: img,
     totalViews: '1023',
     dated: 'September 14, 2019'
   },
@@ -41,7 +42,7 @@ const products =  [
     tags: ['tutorial'],
     description:
       'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    imageUrl: 'https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab48be3042863478ea7d28e/file-xiivbh5WpJ.png',
+    imageUrl: img,
     totalViews: '1023',
     dated: 'September 14, 2019'
   },
@@ -51,7 +52,7 @@ const products =  [
     tags: ['legal', 'employees', 'update'],
     description:
       'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    imageUrl: 'https://images.template.net/wp-content/uploads/2015/05/free-legal-forms.jpg?width=480',
+    imageUrl: img,
     totalViews: '1023',
     dated: 'September 14, 2019'
   },
@@ -61,7 +62,7 @@ const products =  [
     tags: ['tutorial'],
     description:
       'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    imageUrl: 'https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab48be3042863478ea7d28e/file-xiivbh5WpJ.png',
+    imageUrl: img,
     totalViews: '1023',
     dated: 'September 14, 2019'
   },

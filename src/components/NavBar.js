@@ -102,7 +102,7 @@ const NavBar = () => {
                             <ArrowBack style={{ color: "tomato" }} />
                         </IconButton>
                         <Typography variant="h5" style={{ color: "tan" }}>
-                            Portfolio
+                            {window.location.pathname === '/' ? '/home' : window.location.pathname}
                     </Typography>
                     <MobileRightMenuSlider anchor="right" open={drawerOpen} onClose={toggleSlider}>
                         {sideList()}

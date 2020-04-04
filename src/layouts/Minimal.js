@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { NavBar } from '../components'
 
-
 const useStyles = makeStyles(() => ({
   root: {
     height: '100%'

@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box, Table } from "@material-ui/core";
-
-// This is part of the layout and should have its own layout implementation
-import { NavBar } from "../components"
+import { Typography, Box } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {

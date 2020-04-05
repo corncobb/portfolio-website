@@ -6,15 +6,13 @@ const black = '#000000';
 export default {
   black,
   white,
-  primary: {
+  primary: { // Tomato
     contrastText: white,
-    main: '#0A00FF',
+    main: '#FF6347',
   },
-  secondary: {
+  secondary: { // Tan
     contrastText: white,
-    dark: colors.blue[900],
-    main: colors.blue['A400'],
-    light: colors.blue['A400']
+    main: "#d2b48c", 
   },
   success: {
     contrastText: white,

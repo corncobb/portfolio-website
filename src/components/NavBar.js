@@ -17,7 +17,7 @@ import {
 } from "@material-ui/core";
 
 import {
-    ArrowBack,
+    Menu,
     AssignmentInd,
     Home,
     Apps,
@@ -99,7 +99,7 @@ const NavBar = () => {
                 <AppBar position="static" style={{ background: "#222" }}>
                     <Toolbar>
                         <IconButton onClick={toggleSlider}>
-                            <ArrowBack style={{ color: "tomato" }} />
+                            <Menu style={{ color: "tomato" }} />
                         </IconButton>
                         <Typography variant="h5" style={{ color: "tan" }}>
                             {window.location.pathname === '/' ? '/home' : window.location.pathname}

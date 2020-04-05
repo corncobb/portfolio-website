@@ -4,16 +4,19 @@ import Routes from './Routes';
 import { createBrowserHistory } from 'history';
 import CssBaseline from '@material-ui/core/CssBaseline'
 import './App.css'
-
+import { ThemeProvider } from '@material-ui/styles';
+import theme from './theme';
 const browserHistory = createBrowserHistory();
 
 const App = () => {
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Router history={browserHistory}>
-        <Routes />
-      </Router>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router history={browserHistory}>
+          <Routes />
+        </Router>
+      </ThemeProvider>
     </React.Fragment>
   );
 }

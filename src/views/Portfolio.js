@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from '@material-ui/core';
 import { MaterialCard } from '../components'
 import { v4 as uuid} from 'uuid';
-import img from '../coding-background-2-min.jpg';
+import img from '../assets/images/coding-background-2-min.jpg';
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {

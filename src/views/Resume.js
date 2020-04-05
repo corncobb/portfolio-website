@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box } from "@material-ui/core";
+import { Typography, Box, Button } from "@material-ui/core";
+import Pdf from '../assets/resume/Resume-Cameron-Cobb.pdf';
+
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {
@@ -90,6 +92,9 @@ const useStyles = makeStyles(theme => ({
             }
         }
     },
+    button: {
+        margin: "3rem",
+    },
     heading: {
         color: "tomato",
         padding: "3rem 0",
@@ -108,23 +113,28 @@ const Resume = () => {
     return (
         <React.Fragment>
             <Box component="header" className={classes.mainContainer}>
+                <div style={{ textAlign: "center" }}>
+                    <Button size="large" variant="outlined" className={classes.button} href={Pdf} color="primary">
+                        Downloadable Resume
+                </Button>
+                </div>
                 <Typography variant="h4" align="center" className={classes.heading}>
-                    Working Exp...
+                    Working Experience
                 </Typography>
                 <Box component="div" className={classes.timeLine}>
                     {/* Good idea to add data to an array and dynamically add this in */}
-                    
+
                     <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
                         2013
                     </Typography>
                     <Box component="div" className={classes.timeLineItem}>
-                        <Typography variant="h5" align="left"  className={classes.subHeading}>
+                        <Typography variant="h5" align="left" className={classes.subHeading}>
                             Web design*
                         </Typography>
-                        <Typography variant="body1" align="left" style={{color: "tomato"}}>
+                        <Typography variant="body1" align="left" style={{ color: "tomato" }}>
                             Company where worked
                         </Typography>
-                        <Typography variant="subtitle1" align="left" style={{color: "tan"}}>
+                        <Typography variant="subtitle1" align="left" style={{ color: "tan" }}>
                             Lorem asdfasdf
                         </Typography>
                     </Box>
@@ -132,13 +142,13 @@ const Resume = () => {
                         2014
                     </Typography>
                     <Box component="div" className={classes.timeLineItem}>
-                        <Typography variant="h5" align="left"  className={classes.subHeading}>
+                        <Typography variant="h5" align="left" className={classes.subHeading}>
                             C++*
                         </Typography>
-                        <Typography variant="body1" align="left" style={{color: "tomato"}}>
+                        <Typography variant="body1" align="left" style={{ color: "tomato" }}>
                             Company where worked again
                         </Typography>
-                        <Typography variant="subtitle1" align="left" style={{color: "tan"}}>
+                        <Typography variant="subtitle1" align="left" style={{ color: "tan" }}>
                             Lorem asdfasdf
                         </Typography>
                     </Box>

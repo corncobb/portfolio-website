@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box, Button, Link} from "@material-ui/core";
+import { Typography, Box, Button, Link } from "@material-ui/core";
 import Pdf from '../assets/resume/Resume-Cameron-Cobb.pdf';
 
 

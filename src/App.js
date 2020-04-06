@@ -9,6 +9,7 @@ import theme from './theme';
 const browserHistory = createBrowserHistory();
 
 const App = () => {
+
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>

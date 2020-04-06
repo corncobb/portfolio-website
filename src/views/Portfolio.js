@@ -24,8 +24,8 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
-    sourceCode: '',
-    liveDemo: ''
+    sourceUrl: 'https://www.google.com/',
+    liveUrl: 'https://www.google.com/'
   },
   {
     title: 'Project 2',
@@ -36,8 +36,8 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
-    sourceCode: '',
-    liveDemo: ''
+    sourceUrl: 'https://www.google.com/',
+    liveUrl: 'https://www.google.com/'
   },
   {
     title: 'Project 3',
@@ -48,8 +48,8 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
-    sourceCode: '',
-    liveDemo: ''
+    sourceUrl: 'https://www.google.com/',
+    liveUrl: 'https://www.google.com/'
   },
   {
     title: 'Project 4',
@@ -60,8 +60,8 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
-    sourceCode: '',
-    liveDemo: ''
+    sourceUrl: 'https://www.google.com/',
+    liveUrl: 'https://www.google.com/'
   },
 ];
 

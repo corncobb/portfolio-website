@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch, Redirect } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Switch, Redirect, useLocation } from 'react-router-dom';
 import { RouteWithLayout } from './components';
 import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
@@ -14,6 +14,13 @@ import {
 } from './views'
 
 const Routes = () => {
+    const { pathname } = useLocation();
+    
+    // Scroll to the top of the page on every new page
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <Switch>
             <RouteWithLayout
@@ -53,7 +60,7 @@ const Routes = () => {
                 layout={MinimalLayout}
                 path="/not-found"
             />
-            {/* <Redirect to="/not-found" /> */}
+            <Redirect to="/not-found" />
         </Switch>
     );
 };

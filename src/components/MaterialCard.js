@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
+import { Link as RouterLink } from 'react-router-dom'
+import Link from '@material-ui/core/Link'
 
 import {
   CardActionArea,
@@ -39,7 +41,6 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center'
   },
   margin: {
-    //float: 'left',
     marginRight: theme.spacing(1),
     marginTop: 10
   },
@@ -50,9 +51,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const MaterialCard = props => {
-  const { className, product, ...rest } = props;
-
-  const limitTitle = (title, limit = 25) => {
+  
+  const { className, project, ...rest } = props;
+  
+  const limitCharacters = (title, limit = 25) => {
     const newTitle = [];
     if (title.length > limit) {
       title.split(' ').reduce((acc, cur) => {
@@ -70,49 +72,55 @@ const MaterialCard = props => {
 
   return (
     <div>
-      <Card
-        {...rest}
-        className={clsx(classes.root, className)}
-      >
-        <CardActionArea>
-          <CardMedia
-            className={classes.image}
-            image={product.imageUrl}
-            title="Contemplative Reptile"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {limitTitle(product.title)}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
-          </Typography>
+      <Link underline='none' component={RouterLink} to={{
+        pathname: `/portfolio/${project.urlTitle}`,
+        state: {
+          project: project
+      }}}>
 
-            <Grid
-              container
-              justify="space-between"
-            >
+        <Card
+          {...rest}
+          className={clsx(classes.root, className)}
+        >
+          <CardActionArea>
+            <CardMedia
+              className={classes.image}
+              image={project.imageUrl}
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {limitCharacters(project.title)}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {limitCharacters(project.description, 200)}
+              </Typography>
+
               <Grid
-                item
+                container
+                justify="space-between"
               >
-                {product.tags.map((tag, index) => (
-                  <Chip className={classes.margin} key={index} label={tag} size="small" color="primary" />
-                ))}
+                <Grid
+                  item
+                >
+                  {project.stack.map((tag, index) => (
+                    <Chip className={classes.margin} key={index} label={tag} size="small" color="primary" />
+                  ))}
 
+                </Grid>
               </Grid>
-            </Grid>
 
-          </CardContent>
-        </CardActionArea>
-      </Card>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </Link>
     </div>
   );
 };
 
 MaterialCard.propTypes = {
   className: PropTypes.string,
-  product: PropTypes.object.isRequired
+  project: PropTypes.object.isRequired
 };
 
 export default MaterialCard;

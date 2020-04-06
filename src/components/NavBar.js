@@ -21,7 +21,8 @@ import {
     AssignmentInd,
     Home,
     Apps,
-    ContactMail
+    ContactMail,
+    Info
 } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
@@ -56,6 +57,11 @@ const menuItems = [
         listIcon: <Apps />,
         listText: "Portfolio",
         listPath: "/portfolio"
+    },
+    {
+        listIcon: <Info />,
+        listText: "About",
+        listPath: "/about"
     },
     {
         listIcon: <ContactMail />,
@@ -102,7 +108,7 @@ const NavBar = () => {
                             <Menu style={{ color: "tomato" }} />
                         </IconButton>
                         <Typography variant="h5" style={{ color: "tan" }}>
-                            {window.location.pathname === '/' ? '/home' : window.location.pathname}
+                            {window.location.pathname === '/' ? '/home' : "/" + window.location.pathname.split("/")[1]}
                     </Typography>
                     <MobileRightMenuSlider anchor="right" open={drawerOpen} onClose={toggleSlider}>
                         {sideList()}

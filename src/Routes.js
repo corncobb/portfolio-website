@@ -9,7 +9,8 @@ import {
     About,
     Contact,
     Portfolio,
-    NotFound
+    PortfolioProject,
+    NotFound,
 } from './views'
 
 const Routes = () => {
@@ -37,16 +38,22 @@ const Routes = () => {
                 path="/contact"
             />
             <RouteWithLayout
+                exact
                 component={Portfolio}
                 layout={MainLayout}
                 path="/portfolio"
+            />
+            <RouteWithLayout
+                component={PortfolioProject}
+                layout={MainLayout}
+                path="/portfolio/:id"
             />
             <RouteWithLayout
                 component={NotFound}
                 layout={MinimalLayout}
                 path="/not-found"
             />
-            <Redirect to="/not-found" />
+            {/* <Redirect to="/not-found" /> */}
         </Switch>
     );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box, Button } from "@material-ui/core";
+import { Typography, Box, Button, Link} from "@material-ui/core";
 import Pdf from '../assets/resume/Resume-Cameron-Cobb.pdf';
 
 
@@ -114,7 +114,7 @@ const Resume = () => {
         <React.Fragment>
             <Box component="header" className={classes.mainContainer}>
                 <div style={{ textAlign: "center" }}>
-                    <Button size="large" variant="outlined" className={classes.button} href={Pdf} color="primary">
+                    <Button component={Link} underline='none' size="large" variant="outlined" target="_blank" className={classes.button} href={Pdf} color="primary">
                         Downloadable Resume
                 </Button>
                 </div>

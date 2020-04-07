@@ -24,6 +24,7 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
+    type: 'hackathon',
     sourceUrl: 'https://www.google.com/',
     liveUrl: 'https://www.google.com/'
   },
@@ -36,6 +37,7 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
+    type: 'hackathon',
     sourceUrl: 'https://www.google.com/',
     liveUrl: 'https://www.google.com/'
   },
@@ -48,6 +50,7 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
+    type: 'hackathon',
     sourceUrl: 'https://www.google.com/',
     liveUrl: 'https://www.google.com/'
   },
@@ -60,6 +63,7 @@ const projects = [
     imageUrl: img,
     started: 'September 14, 2019',
     status: 'Completed', // completed, started, in-progress
+    type: 'hackathon',
     sourceUrl: 'https://www.google.com/',
     liveUrl: 'https://www.google.com/'
   },

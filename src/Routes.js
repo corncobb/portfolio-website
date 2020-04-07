@@ -15,7 +15,6 @@ import {
 
 const Routes = () => {
     const { pathname } = useLocation();
-    
     // Scroll to the top of the page on every new page
     useEffect(() => {
         window.scrollTo(0, 0);

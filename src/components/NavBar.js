@@ -110,7 +110,7 @@ const NavBar = () => {
         <React.Fragment>
             <Box component="nav">
                 <AppBar position="static" style={{ background: "#222" }}>
-                    <Toolbar>
+                    <Toolbar id="back-to-top-anchor">
                         <IconButton onClick={toggleSlider}>
                             <Menu style={{ color: "tomato" }} />
                         </IconButton>

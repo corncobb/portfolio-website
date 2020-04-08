@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Link} from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import MobileRightMenuSlider from '@material-ui/core/Drawer'
+import SocialLinks from '../assets/data/SocialLinks'
 import {
     AppBar,
     Toolbar,
@@ -12,6 +13,7 @@ import {
     Avatar,
     Divider,
     List,
+    Link,
     Typography,
     Box
 } from "@material-ui/core";
@@ -22,7 +24,9 @@ import {
     Home,
     Apps,
     ContactMail,
-    Info
+    Info,
+    LinkedIn,
+    GitHub
 } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
@@ -39,6 +43,10 @@ const useStyles = makeStyles(theme => ({
     },
     listItem: {
         color: "tan"
+    },
+    pageTitle: {
+        color: "tan",
+        flexGrow: 1
     }
 }))
 
@@ -66,7 +74,7 @@ const menuItems = [
     {
         listIcon: <ContactMail />,
         listText: "Contact",
-        listPath: "/"
+        listPath: "/contact"
     },
 ]
 
@@ -86,7 +94,7 @@ const NavBar = () => {
             <Divider />
             <List>
                 {menuItems.map((item, key) => (
-                    <ListItem button key={key} component={Link} to={item.listPath}>
+                    <ListItem button key={key} component={RouterLink} to={item.listPath}>
                         <ListItemIcon className={classes.listItem}>
                             {item.listIcon}
                         </ListItemIcon>
@@ -100,19 +108,26 @@ const NavBar = () => {
 
     return (
         <React.Fragment>
-
             <Box component="nav">
                 <AppBar position="static" style={{ background: "#222" }}>
                     <Toolbar>
                         <IconButton onClick={toggleSlider}>
                             <Menu style={{ color: "tomato" }} />
                         </IconButton>
-                        <Typography variant="h5" style={{ color: "tan" }}>
+                        <Typography variant="h5" className={classes.pageTitle}>
                             {window.location.pathname === '/' ? '/home' : "/" + window.location.pathname.split("/")[1]}
-                    </Typography>
-                    <MobileRightMenuSlider anchor="right" open={drawerOpen} onClose={toggleSlider}>
-                        {sideList()}
-                    </MobileRightMenuSlider>
+                        </Typography>
+                        <IconButton component={Link} href={SocialLinks.GitHub}
+                            underline='none' target="_blank" aria-label="GitHub" color="primary">
+                            <GitHub />
+                        </IconButton>
+                        <IconButton component={Link} href={SocialLinks.LinkedIn}
+                            underline='none' target="_blank" aria-label="LinkedIn" color="primary">
+                            <LinkedIn />
+                        </IconButton>
+                        <MobileRightMenuSlider anchor="right" open={drawerOpen} onClose={toggleSlider}>
+                            {sideList()}
+                        </MobileRightMenuSlider>
                     </Toolbar>
                 </AppBar>
             </Box>

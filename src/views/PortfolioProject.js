@@ -79,7 +79,7 @@ const PortfolioProject = (props) => {
                         md={6}
                         xs={12}
                     >
-                        <img className={classes.imageContainer} src={project.imageUrl} alt={project.title} />
+                        <img className={classes.imageContainer} src={project.imageUrl} alt={project.urlTitle.split('-').join(' ')} />
 
                     </Grid>
                     <Grid

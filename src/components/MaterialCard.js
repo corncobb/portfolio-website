@@ -86,7 +86,7 @@ const MaterialCard = props => {
             <CardMedia
               className={classes.image}
               image={project.imageUrl}
-              title="Contemplative Reptile"
+              title={project.urlTitle.split('-').join(' ')}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">

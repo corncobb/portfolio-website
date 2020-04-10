@@ -106,7 +106,7 @@ const About = () => {
               About
             </Typography>
             <Typography className={classes.description} variant="body1" align="left" style={{ color: "tan" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            I am currently a contract software developer for SaaS companies and industrial manufacturers in the Reno/Sparks, NV area. Progress driven with the ability to learn quickly in a rapidly changing environment who loves writing scalable and quality code, contributing to open source projects, and collaborating with other developers and software engineers.
             </Typography>
             <Typography variant="subtitle1" align="left" className={classes.subtitle}>
               Skills

@@ -3,11 +3,11 @@ import { Header } from '../components';
 
 const Home = () => {
 
-  return (
-    <React.Fragment >
-      <Header />
-    </React.Fragment>
-  );
-}
+    return (
+        <React.Fragment >
+            <Header />
+        </React.Fragment>
+    );
+};
 
 export default Home;

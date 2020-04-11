@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, Button, DialogContentText, } from "@material-ui/core";
+import { Dialog, DialogActions, DialogContent, DialogTitle, Button, DialogContentText, } from '@material-ui/core';
 
 
 const Popup = (props) => {
@@ -25,13 +25,18 @@ const Popup = (props) => {
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} variant="contained" color="primary" autoFocus>
+                <Button
+                    onClick={handleClose}
+                    variant="contained"
+                    color="primary"
+                    autoFocus
+                >
                     Got it!
-              </Button>
+                </Button>
             </DialogActions>
         </Dialog >
-    )
+    );
 
-}
+};
 
 export default Popup;

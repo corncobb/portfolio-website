@@ -5,18 +5,18 @@ import { NavBar } from '../components';
 
 const Main = props => {
   
-  return (
-    <div>
-      <NavBar />
-      <main >
-        {props.children}
-      </main>
-    </div>
-  );
+    return (
+        <div>
+            <NavBar />
+            <main >
+                {props.children}
+            </main>
+        </div>
+    );
 };
 
 Main.propTypes = {
-  children: PropTypes.node
+    children: PropTypes.node
 };
 
 export default Main;

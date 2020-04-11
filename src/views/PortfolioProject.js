@@ -1,47 +1,47 @@
 import React from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box, Grid, Button, Link, Chip } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Box, Grid, Button, Link, Chip } from '@material-ui/core';
 import {
     Code, PlayArrow
-} from "@material-ui/icons";
+} from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {
-        background: "#233",
-        minHeight: "100vh",
-        height: "100%",
+        background: '#233',
+        minHeight: '100vh',
+        height: '100%',
     },
     itemsContainer: {
-        margin: "auto",
-        width: "95%",
+        margin: 'auto',
+        width: '95%',
     },
     imageContainer: {
-        width: "100%",
-        position: "relative",
-        top: "50%",
-        transform: "translateY(-50%)",
-        borderRadius: "4px"
+        width: '100%',
+        position: 'relative',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        borderRadius: '4px'
     },
     textContainer: {
-        position: "relative",
-        top: "50%",
-        transform: "translateY(-50%)",
+        position: 'relative',
+        top: '50%',
+        transform: 'translateY(-50%)',
 
     },
     heading: {
-        color: "white",
-        padding: "0",
-        textTransform: "uppercase",
-        fontWeight: "bold",
-        fontStretch: "normal",
-        fontSize: "36px"
+        color: 'white',
+        padding: '0',
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        fontStretch: 'normal',
+        fontSize: '36px'
     },
     subHeading: {
-        color: "tomato",
-        padding: "0",
-        textTransform: "uppercase",
-        fontStretch: "normal",
-        fontSize: "20px"
+        color: 'tomato',
+        padding: '0',
+        textTransform: 'uppercase',
+        fontStretch: 'normal',
+        fontSize: '20px'
     },
     description: {
         marginBottom: theme.spacing(2)
@@ -58,12 +58,12 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(1),
         marginBottom: theme.spacing(2)
     }
-}))
+}));
 
 
 const PortfolioProject = (props) => {
-    const classes = useStyles()
-    const project = props.location.state.project
+    const classes = useStyles();
+    const project = props.location.state.project;
 
     return (
         <Box className={classes.mainContainer}>
@@ -79,7 +79,11 @@ const PortfolioProject = (props) => {
                         md={6}
                         xs={12}
                     >
-                        <img className={classes.imageContainer} src={project.imageUrl} alt={project.urlTitle.split('-').join(' ')} />
+                        <img
+                            className={classes.imageContainer}
+                            src={project.imageUrl}
+                            alt={project.urlTitle.split('-').join(' ')}
+                        />
 
                     </Grid>
                     <Grid
@@ -88,18 +92,37 @@ const PortfolioProject = (props) => {
                         xs={12}
                     >
                         <Box className={classes.textContainer}>
-                            <Typography variant="h1" align="left" className={classes.heading}>
+                            <Typography
+                                variant="h1"
+                                align="left"
+                                className={classes.heading}
+                            >
                                 {project.title}
                             </Typography>
-                            <Typography variant="h3" align="left" className={classes.subHeading}>
+                            <Typography
+                                variant="h3"
+                                align="left"
+                                className={classes.subHeading}
+                            >
                                 {project.type}
                             </Typography>
                             <div className={classes.stackContainer}>
                                 {project.stack.map((tag, index) => (
-                                    <Chip className={classes.chip} key={index} label={tag} size="small" color="primary" />
+                                    <Chip
+                                        className={classes.chip}
+                                        key={index}
+                                        label={tag}
+                                        size="small"
+                                        color="primary"
+                                    />
                                 ))}
                             </div>
-                            <Typography className={classes.description} variant="subtitle1" align="left" style={{ color: "tan" }}>
+                            <Typography
+                                className={classes.description}
+                                variant="subtitle1"
+                                align="left"
+                                style={{ color: 'tan' }}
+                            >
                                 {project.description}
                             </Typography>
                             {project.sourceUrl ? <Grid
@@ -111,7 +134,7 @@ const PortfolioProject = (props) => {
                                     fullWidth
                                     component={Link}
                                     href={project.sourceUrl}
-                                    underline='none'
+                                    underline="none"
                                     variant="contained"
                                     color="primary"
                                     target="_blank"
@@ -130,7 +153,7 @@ const PortfolioProject = (props) => {
                                     fullWidth
                                     component={Link}
                                     href={project.liveUrl}
-                                    underline='none'
+                                    underline="none"
                                     variant="outlined"
                                     color="primary"
                                     target="_blank"
@@ -146,6 +169,6 @@ const PortfolioProject = (props) => {
             </Box>
         </Box>
     );
-}
+};
 
 export default PortfolioProject;

@@ -11,7 +11,7 @@ import {
     Portfolio,
     PortfolioProject,
     NotFound,
-} from './views'
+} from './views';
 
 const Routes = () => {
     const { pathname } = useLocation();

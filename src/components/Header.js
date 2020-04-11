@@ -1,14 +1,14 @@
 import React from 'react';
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from '@material-ui/core/styles';
 import Particles from 'react-particles-js';
 import {
     Typography,
     Avatar,
     Grid,
     Box
-} from "@material-ui/core"
-import Typed from "react-typed";
-import Image from '../assets/images/coding-background-1-min.jpg'
+} from '@material-ui/core';
+import Typed from 'react-typed';
+import Image from '../assets/images/coding-background-1-min.jpg';
 
 const useStyles = makeStyles(theme => ({
     avatar: {
@@ -17,14 +17,14 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1)
     },
     title: {
-        color: "tomato"
+        color: 'tomato'
     },
     subtitle: {
-        color: "tan",
-        marginBottom: "3rem"
+        color: 'tan',
+        marginBottom: '3rem'
     },
     backgroundContainer: {
-        position: "absolute",
+        position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',
@@ -32,18 +32,18 @@ const useStyles = makeStyles(theme => ({
         zIndex: -500
     },
     backgroundPhoto: {
-        backgroundColor: "rgba(0, 0, 0, 0.7)",
-        color: "white",
-        height: "100vh",
-        position: "relative",
-        "&:before": {
-            content: "''",
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        color: 'white',
+        height: '100vh',
+        position: 'relative',
+        '&:before': {
+            content: '\'\'',
             backgroundImage: `url(${Image})`,
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
-            position: "absolute",
+            position: 'absolute',
             top: 0,
             left: 0,
             width: '100%',
@@ -52,46 +52,62 @@ const useStyles = makeStyles(theme => ({
         }
     },
     typedContainer: {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        width: "90vw",
-        textAlign: "center",
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '90vw',
+        textAlign: 'center',
         zIndex: 1,
-        userSelect: "none"
+        userSelect: 'none'
     },
     particlesCanvas: {
-        position: "absolute",
+        position: 'absolute',
         top: 0,
         left: 0,
-        opacity: "0.6"
+        opacity: '0.6'
     }
-}))
+}));
 
 const Header = () => {
 
-    const classes = useStyles()
+    const classes = useStyles();
 
     return (
         <React.Fragment>
             <Box className={classes.backgroundContainer}>
                 <Box className={classes.backgroundPhoto}>
                     <Box className={classes.typedContainer}>
-                        <Grid container justify="center">
+                        <Grid
+                            container
+                            justify="center"
+                        >
                             {/* Add this later, from 42:55 */}
-                            <Avatar className={classes.avatar} alt="Cameron Cobb" />
+                            <Avatar
+                                className={classes.avatar}
+                                alt="Cameron Cobb"
+                            />
                         </Grid>
-                        <Typography className={classes.title} variant="h4">
-                            <Typed strings={["Cameron Cobb"]} typeSpeed={40} />
+                        <Typography
+                            className={classes.title}
+                            variant="h4"
+                        >
+                            <Typed
+                                strings={['Cameron Cobb']}
+                                typeSpeed={40}
+                            />
                         </Typography>
                         <br />
-                        <Typography className={classes.subtitle} variant="h5">
+                        <Typography
+                            className={classes.subtitle}
+                            variant="h5"
+                        >
                             <Typed
-                                strings={["Web Developer", "Mobile App Developer", "Contract Software Developer"]}
+                                strings={['Web Developer', 'Mobile App Developer', 'Contract Software Developer']}
                                 typeSpeed={40}
                                 backSpeed={60}
-                                loop />
+                                loop
+                            />
 
                         </Typography>
                     </Box>
@@ -107,10 +123,10 @@ const Header = () => {
                                     }
                                 },
                                 shape: {
-                                    type: "circle",
+                                    type: 'circle',
                                     stroke: {
                                         width: 1,
-                                        color: "tomato"
+                                        color: 'tomato'
                                     }
                                 },
                                 size: {
@@ -134,12 +150,13 @@ const Header = () => {
                                     }
                                 }
                             }
-                        }} />
+                        }}
+                    />
                 </Box>
             </Box>
         </React.Fragment>
-    )
+    );
 
-}
+};
 
 export default Header;

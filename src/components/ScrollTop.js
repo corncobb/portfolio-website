@@ -7,11 +7,11 @@ import Zoom from '@material-ui/core/Zoom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      position: 'fixed',
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
+        position: 'fixed',
+        bottom: theme.spacing(2),
+        right: theme.spacing(2),
     },
-  }));
+}));
 
 
 const ScrollTop = (props) => {
@@ -34,11 +34,15 @@ const ScrollTop = (props) => {
 
     return (
         <Zoom in={trigger}>
-            <div onClick={handleClick} role="presentation" className={classes.root}>
+            <div
+                onClick={handleClick}
+                role="presentation"
+                className={classes.root}
+            >
                 {children}
             </div>
         </Zoom>
     );
-}
+};
 
 export default ScrollTop;

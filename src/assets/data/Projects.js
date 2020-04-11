@@ -13,7 +13,7 @@ export default [
         status: 'Completed', // completed, started, in-progress
         type: 'Tech Interview Problem',
         sourceUrl: 'https://github.com/corncobb/path-algo-submission',
-        liveUrl: 'http://path-finding-algo-react.camcobb.com/'
+        liveUrl: '//path-finding-algo-react.camcobb.com/'
     },
     {
         title: 'Project 2',

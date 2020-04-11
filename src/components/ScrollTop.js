@@ -5,6 +5,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Zoom from '@material-ui/core/Zoom';
 
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         position: 'fixed',
@@ -30,6 +31,7 @@ const ScrollTop = (props) => {
         if (anchor) {
             anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+        
     };
 
     return (

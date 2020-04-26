@@ -8,7 +8,9 @@ import {
     Box
 } from '@material-ui/core';
 import Typed from 'react-typed';
+
 import Image from '../assets/images/coding-background-1-min.jpg';
+import ProfilePic from '../assets/images/ProfilePic-min.jpg';
 
 const useStyles = makeStyles(theme => ({
     avatar: {
@@ -82,8 +84,8 @@ const Header = () => {
                             container
                             justify="center"
                         >
-                            {/* Add this later, from 42:55 */}
                             <Avatar
+                                src={ProfilePic}
                                 className={classes.avatar}
                                 alt="Cameron Cobb"
                             />
@@ -103,7 +105,7 @@ const Header = () => {
                             variant="h5"
                         >
                             <Typed
-                                strings={['Web Developer', 'Mobile App Developer', 'Contract Software Developer']}
+                                strings={['Web Developer', 'Mobile App Developer', 'Full-Stack Software Developer']}
                                 typeSpeed={40}
                                 backSpeed={60}
                                 loop

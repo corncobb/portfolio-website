@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link as RouterLink } from 'react-router-dom';
-import MobileRightMenuSlider from '@material-ui/core/Drawer';
-import SocialLinks from '../assets/data/SocialLinks';
 import {
     AppBar,
     Toolbar,
@@ -15,9 +13,9 @@ import {
     List,
     Link,
     Typography,
-    Box
+    Box,
+    SwipeableDrawer
 } from '@material-ui/core';
-
 import {
     Menu,
     AssignmentInd,
@@ -28,6 +26,9 @@ import {
     LinkedIn,
     GitHub
 } from '@material-ui/icons';
+
+import SocialLinks from '../assets/data/SocialLinks';
+import ProfilePic from '../assets/images/ProfilePic-min.jpg';
 
 const useStyles = makeStyles(theme => ({
     menuSliderContainer: {
@@ -81,8 +82,11 @@ const menuItems = [
 const NavBar = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
-    const toggleSlider = () => {
-        setDrawerOpen(!drawerOpen);
+    const toggleSliderClose = () => {
+        setDrawerOpen(false);
+    };
+    const toggleSliderOpen = () => {
+        setDrawerOpen(true);
     };
 
     const classes = useStyles();
@@ -91,12 +95,12 @@ const NavBar = () => {
         <Box
             className={classes.menuSliderContainer}
             component="div"
-            onClick={toggleSlider}
+            onClick={toggleSliderClose}
         >
             {/* Add this later. 20:01 for reference*/}
             <Avatar
                 className={classes.avatar}
-                src=""
+                src={ProfilePic}
                 alt="Cameron Cobb"
             />
             <Divider />
@@ -130,7 +134,7 @@ const NavBar = () => {
                     style={{ background: '#222' }}
                 >
                     <Toolbar id="back-to-top-anchor">
-                        <IconButton onClick={toggleSlider}>
+                        <IconButton onClick={toggleSliderOpen}>
                             <Menu style={{ color: 'tomato' }} />
                         </IconButton>
                         <Typography
@@ -159,13 +163,14 @@ const NavBar = () => {
                         >
                             <LinkedIn />
                         </IconButton>
-                        <MobileRightMenuSlider
+                        <SwipeableDrawer
                             anchor="right"
                             open={drawerOpen}
-                            onClose={toggleSlider}
+                            onClose={toggleSliderClose}
+                            onOpen={toggleSliderOpen}
                         >
                             {sideList()}
-                        </MobileRightMenuSlider>
+                        </SwipeableDrawer>
                     </Toolbar>
                 </AppBar>
             </Box>

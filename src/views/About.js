@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Box, Grid, Link, Chip, IconButton } from '@material-ui/core';
+import { LinkedIn, GitHub } from '@material-ui/icons';
+
 import SocialLinks from '../assets/data/SocialLinks';
-import { Typography, Box, Grid, Button, Link, Chip, Avatar, IconButton } from '@material-ui/core';
-import {
-    Code, PlayArrow, LinkedIn, GitHub
-} from '@material-ui/icons';
+import ProfilePic from '../assets/images/ProfilePic-min.jpg';
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {
@@ -43,9 +43,11 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(2),
     },
     avatar: {
-        width: theme.spacing(15),
-        height: theme.spacing(15),
-        margin: 'auto'
+        width: "100%",
+        margin: 'auto',
+        paddingTop: "30px",
+        position: "sticky",
+        top: 0
     },
     stackContainer: {
         marginTop: theme.spacing(1),
@@ -81,8 +83,9 @@ const About = () => {
                         md={6}
                         xs={12}
                     >
-                        <Avatar
+                        <img
                             className={classes.avatar}
+                            src={ProfilePic}
                             alt="Cameron Cobb"
                         />
                     </Grid>
@@ -96,14 +99,14 @@ const About = () => {
                             align="left"
                             className={classes.heading}
                         >
-              Cameron Cobb
+                            Cameron Cobb
                         </Typography>
                         <Typography
                             variant="h2"
                             align="left"
                             className={classes.subHeading}
                         >
-              Software Developer
+                            Software Developer
                         </Typography>
                         <IconButton
                             component={Link}
@@ -130,7 +133,7 @@ const About = () => {
                             align="left"
                             className={classes.subtitle}
                         >
-              About
+                            About
                         </Typography>
                         <Typography
                             className={classes.description}
@@ -138,21 +141,21 @@ const About = () => {
                             align="left"
                             style={{ color: 'tan' }}
                         >
-            I am currently a contract software developer for SaaS companies and industrial manufacturers in the Reno/Sparks, NV area. Progress driven with the ability to learn quickly in a rapidly changing environment who loves writing scalable and quality code, contributing to open source projects, and collaborating with other developers and software engineers.
+                            I am currently a contract software developer for SaaS companies and industrial manufacturers in the Reno/Sparks, NV area. Progress driven with the ability to learn quickly in a rapidly changing environment who loves writing scalable and quality code, contributing to open source projects, and collaborating with other developers and software engineers.
                         </Typography>
                         <Typography
                             variant="subtitle1"
                             align="left"
                             className={classes.subtitle}
                         >
-              Skills
+                            Skills
                         </Typography>
                         <Typography
                             variant="subtitle2"
                             align="left"
                             className={classes.subHeading}
                         >
-              Languages
+                            Languages
                         </Typography>
                         <div className={classes.stackContainer}>
                             {languages.map((tag, index) => (
@@ -169,7 +172,7 @@ const About = () => {
                             align="left"
                             className={classes.subHeading}
                         >
-              Frameworks / Libraries
+                            Frameworks / Libraries
                         </Typography>
                         <div className={classes.stackContainer}>
                             {frameworks.map((tag, index) => (
@@ -186,7 +189,7 @@ const About = () => {
                             align="left"
                             className={classes.subHeading}
                         >
-              Tools / Services / Databases
+                            Tools / Services / Databases
                         </Typography>
                         <div className={classes.stackContainer}>
                             {tools.map((tag, index) => (
@@ -203,7 +206,7 @@ const About = () => {
                             align="left"
                             className={classes.subHeading}
                         >
-              Cloud Services
+                            Cloud Services
                         </Typography>
                         <div className={classes.stackContainer}>
                             {cloudServices.map((tag, index) => (
@@ -220,7 +223,7 @@ const About = () => {
                             align="left"
                             className={classes.subHeading}
                         >
-              Dev Tools
+                            Dev Tools
                         </Typography>
                         <div className={classes.stackContainer}>
                             {devTools.map((tag, index) => (
@@ -237,7 +240,7 @@ const About = () => {
                             align="left"
                             className={classes.subHeading}
                         >
-              Other
+                            Other
                         </Typography>
                         <div className={classes.stackContainer}>
                             {other.map((tag, index) => (

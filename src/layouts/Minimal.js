@@ -1,33 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
+
 import { NavBar } from '../components';
 
 const useStyles = makeStyles(() => ({
-    root: {
-        height: '100%'
-    },
-    content: {
-        height: '100%'
-    }
+  root: {
+    height: '100%'
+  },
+  content: {
+    height: '100%'
+  }
 }));
 
-const Minimal = props => {
-    const { children } = props;
+const Minimal = (props) => {
+  const { children } = props;
 
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <div className={classes.root}>
-            <NavBar />
-            <main className={classes.content}>{children}</main>
-        </div>
-    );
+  return (
+    <div className={classes.root}>
+      <NavBar />
+      <main className={classes.content}>{children}</main>
+    </div>
+  );
 };
 
 Minimal.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string
+  children: PropTypes.node,
+  className: PropTypes.string
 };
 
 export default Minimal;

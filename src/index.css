@@ -4,10 +4,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100%!important;
+  min-height: 100% !important;
   margin: 0;
   padding: 0;
-  background-color: tomato!important;
+  background-color: tomato !important;
 }
 
 code {

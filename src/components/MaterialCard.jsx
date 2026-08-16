@@ -91,7 +91,7 @@ const MaterialCard = (props) => {
                 {limitCharacters(project.description, 200)}
               </Typography>
 
-              <Grid container justify="space-between">
+              <Grid container justifyContent="space-between">
                 <Grid item>
                   {project.stack.map((tag, index) => (
                     <Chip

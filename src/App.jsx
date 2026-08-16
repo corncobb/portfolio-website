@@ -29,9 +29,9 @@ const App = () => {
             <KeyboardArrowUpIcon />
           </Fab>
         </ScrollTop>
-        <Popup title="Heads up!!!">
+        {/* <Popup title="Heads up!!!">
           This site is under construction. Some content may change in the future
-        </Popup>
+        </Popup> */}
       </ThemeProvider>
     </React.Fragment>
   );

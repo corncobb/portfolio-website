@@ -74,7 +74,7 @@ const Header = () => {
       <Box className={classes.backgroundContainer}>
         <Box className={classes.backgroundPhoto}>
           <Box className={classes.typedContainer}>
-            <Grid container justify="center">
+            <Grid container justifyContent="center">
               <Avatar
                 src={ProfilePic}
                 className={classes.avatar}

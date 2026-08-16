@@ -3,39 +3,29 @@
   "version": "0.1.0",
   "homepage": "https://camcobb.com",
   "private": true,
+  "type": "module",
   "dependencies": {
-    "@material-ui/core": "^4.9.7",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/styles": "^4.9.6",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "clsx": "^1.1.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/styles": "^4.11.5",
+    "clsx": "^2.1.1",
     "history": "^4.10.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-particles-js": "^2.7.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react-router-dom": "^5.3.4",
     "react-typed": "^1.2.0",
-    "smoothscroll-polyfill": "^0.4.4",
-    "source-map-loader": "^0.2.4",
-    "ts-loader": "^6.2.2",
-    "uuid": "^7.0.3"
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
     "lintfix": "eslint --fix .",
     "lint": "eslint ."
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -50,8 +40,19 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "prettier": "^2.0.4",
-    "typescript": "^3.8.3"
+    "@babel/core": "^7.25.2",
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/preset-react": "^7.24.7",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^13.5.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.3.3",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.2"
   }
 }
